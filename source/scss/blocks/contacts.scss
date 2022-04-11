@@ -1,0 +1,51 @@
+.contacts__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.contacts__callback {
+  margin: 0;
+  font-weight: 300;
+  font-size: 24px;
+  text-align: center;
+}
+
+.contacts__item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.contact__link {
+  font-weight: 300;
+  font-size: 24px;
+  color: $color-accent;
+  text-decoration: none;
+  font-style: normal;
+}
+
+.contact__definition {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.map {
+  position: relative;
+}
+
+.map__decoration {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-image: url("/img/map/map-triangle.svg");
+  background-size: cover;
+  background-position: center -114px;
+  background-repeat: no-repeat;
+}

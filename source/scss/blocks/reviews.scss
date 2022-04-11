@@ -1,0 +1,64 @@
+.reviews {
+  padding-bottom: 50px;
+}
+
+.feedback {
+  padding: 50px 0 40px;
+  margin: 0;
+  list-style: none;
+}
+
+.feedback__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.feedback__name {
+  margin: 0 0 30px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.feedback__info {
+  display: none;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.feedback__description {
+  font-weight: 400;
+  font-size: 14px;
+  margin: 0;
+  text-align: center;
+}
+
+.reviews__dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reviews__dot {
+  display: block;
+  border: none;
+  padding: 0;
+  width: 6px;
+  height: 6px;
+  background-color: $color-main;
+  opacity: 0.3;
+  cursor: pointer;
+  border-radius: 50%;
+
+  &--active {
+    outline: 3px solid $color-main;
+    background-color: $color-light;
+    opacity: 1;
+  }
+}
+
+.reviews__dot + .reviews__dot {
+  margin-left: 19px;
+}
+

@@ -1,0 +1,13 @@
+//общие стили
+@import "system/font";
+@import "system/var";
+@import "system/mixins";
+// блоки сайта
+@import "blocks/main";
+@import "blocks/header-main";
+@import "blocks/app-links";
+@import "blocks/promo";
+@import "blocks/reviews";
+@import "blocks/tariff";
+@import "blocks/contacts";
+@import "blocks/main-footer";

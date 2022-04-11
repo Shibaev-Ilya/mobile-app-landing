@@ -1,0 +1,81 @@
+.promo__item {
+  margin: 0;
+  font-size: 24px;
+  text-align: center;
+}
+
+.advantages {
+  padding-top: 46px;
+}
+
+.advantages__list {
+  margin: 0;
+  list-style: none;
+  background: linear-gradient(171deg, rgba(0, 212, 255, 0) 7%, rgba(242, 242, 242, 1) 7%);
+  padding: 0;
+  display: grid;
+  justify-content: center;
+  grid-template-rows: 120px repeat(3, min-content) 277px;
+
+  @include mediumWidth() {
+    background: linear-gradient(175deg, rgba(0, 212, 255, 0) 21%, rgba(242, 242, 242, 1) 21%);
+    grid-template-rows: 120px repeat(3, min-content);
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.preference__item {
+  max-width: 310px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &--first {
+    grid-row: 2 / 3;
+  }
+
+  &--second {
+    grid-row: 3 / 4;
+  }
+
+  &--third {
+    grid-row: 4 / 5;
+  }
+
+  &--fourth {
+    grid-row: -1 / -2;
+    overflow: hidden;
+    background-image: url("/img/advantages/iphone-mobile.png");
+    background-repeat: no-repeat;
+    background-position: top;
+
+    @include mediumWidth() {
+      grid-column: 1 / 2;
+      grid-row: 1 / -1;
+      background-image: url("/img/advantages/iphone-tablet.png");
+      background-position: center 76px;
+    }
+  }
+}
+
+.preference__image {
+  order: 3;
+  display: none;
+
+  &--mobile {
+    display: block;
+  }
+}
+
+.preference__title {
+  margin: 0 0 24px;
+  font-weight: 700;
+  font-size: 18px;
+  color: $color-dark;
+}
+
+.preference__descriprion {
+  text-align: center;
+  font-size: 14px;
+  margin: 0 0 43px;
+}
