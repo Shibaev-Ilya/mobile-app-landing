@@ -1,0 +1,417 @@
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../../fonts/opensans.woff2") format("woff2"), url("../../fonts/opensans.woff") format("woff");
+  font-display: swap; }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../fonts/opensansbold.woff2") format("woff2"), url("../../fonts/opensansbold.woff") format("woff");
+  font-display: swap; }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/opensanslight.woff2") format("woff2"), url("../../fonts/opensanslight.woff") format("woff");
+  font-display: swap; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden; }
+
+.page__body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif; }
+
+.container {
+  padding: 0 20px; }
+  @media (min-width: 1200px) {
+    .container {
+      padding: 0 130px; } }
+
+.header-main {
+  background-color: #283645;
+  background-image: url("/img/header/back-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column; }
+  @media (min-width: 321px) {
+    .header-main {
+      background-image: url("/img/header/back-tablet.jpg"); } }
+  @media (min-width: 660px) {
+    .header-main {
+      background-image: url("/img/header/back-desktop.jpg"); } }
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 21px 0; }
+
+.header-main__wrap {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: relative; }
+  .header-main__wrap--open {
+    background: #283645;
+    box-shadow: 0px 1px 0px #000000, inset 0px 1px 0px rgba(255, 255, 255, 0.15); }
+
+.navigation__list {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .navigation__list--open {
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    background-color: #283645;
+    transform: translateY(100%); }
+
+.navigation__item {
+  background: #283645;
+  box-shadow: 0 1px 0 #000000, inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1px; }
+
+.navigation__link {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 25px 0;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 700; }
+
+.navigation__toggle {
+  position: relative;
+  width: 50px;
+  height: 24px;
+  transition: width 0.3s;
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer; }
+  .navigation__toggle::before {
+    content: "";
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: block;
+    height: 4px;
+    background-color: #ffffff;
+    transition: 0.5s; }
+  .navigation__toggle::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: block;
+    height: 4px;
+    background-color: #ffffff;
+    transition: 0.5s; }
+  .navigation__toggle .line {
+    transition: 0.3s;
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: #ffffff; }
+  .navigation__toggle--close {
+    width: 24px; }
+    .navigation__toggle--close .line {
+      width: 0; }
+    .navigation__toggle--close::before {
+      transform: rotate(45deg) scaleX(1.4) translateY(-2px);
+      transform-origin: top left; }
+    .navigation__toggle--close::after {
+      transform: rotate(-45deg) scaleX(1.4) translateY(2px);
+      transform-origin: bottom left; }
+
+.apps {
+  display: grid; }
+  @media (min-width: 660px) {
+    .apps {
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: 1fr 1fr; } }
+
+.apps__intro {
+  display: block;
+  max-width: 300px;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 120%;
+  text-align: center; }
+
+.apps__wrapper {
+  background-color: #1d2631;
+  padding: 28px 0 38px; }
+
+.apps__link-button {
+  max-width: 300px;
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+  border: 3px solid #ffffff;
+  padding: 20px 38px;
+  border-radius: 29px; }
+
+.apps__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.apps__item + .apps__item {
+  margin-left: 35px; }
+
+.apps__link {
+  display: block; }
+
+.apps__info {
+  font-size: 14px;
+  text-align: center;
+  margin: 0;
+  max-width: 300px; }
+
+.apps__image {
+  display: block;
+  max-width: 100%;
+  align-self: end; }
+  @media (min-width: 660px) {
+    .apps__image {
+      grid-column: 2 / 3;
+      grid-row: 1 / 3; } }
+
+.promo__item {
+  margin: 0;
+  font-size: 24px;
+  text-align: center; }
+
+.advantages {
+  padding-top: 46px; }
+
+.advantages__list {
+  margin: 0;
+  list-style: none;
+  background: linear-gradient(171deg, rgba(0, 212, 255, 0) 7%, #f2f2f2 7%);
+  padding: 0;
+  display: grid;
+  justify-content: center;
+  grid-template-rows: 120px repeat(3, min-content) 277px; }
+  @media (min-width: 660px) {
+    .advantages__list {
+      background: linear-gradient(175deg, rgba(0, 212, 255, 0) 21%, #f2f2f2 21%);
+      grid-template-rows: 120px repeat(3, min-content);
+      grid-template-columns: 1fr 1fr; } }
+
+.preference__item {
+  max-width: 310px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .preference__item--first {
+    grid-row: 2 / 3; }
+  .preference__item--second {
+    grid-row: 3 / 4; }
+  .preference__item--third {
+    grid-row: 4 / 5; }
+  .preference__item--fourth {
+    grid-row: -1 / -2;
+    overflow: hidden;
+    background-image: url("/img/advantages/iphone-mobile.png");
+    background-repeat: no-repeat;
+    background-position: top; }
+    @media (min-width: 660px) {
+      .preference__item--fourth {
+        grid-column: 1 / 2;
+        grid-row: 1 / -1;
+        background-image: url("/img/advantages/iphone-tablet.png");
+        background-position: center 76px; } }
+
+.preference__image {
+  order: 3;
+  display: none; }
+  .preference__image--mobile {
+    display: block; }
+
+.preference__title {
+  margin: 0 0 24px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #000000; }
+
+.preference__descriprion {
+  text-align: center;
+  font-size: 14px;
+  margin: 0 0 43px; }
+
+.reviews {
+  padding-bottom: 50px; }
+
+.feedback {
+  padding: 50px 0 40px;
+  margin: 0;
+  list-style: none; }
+
+.feedback__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+.feedback__name {
+  margin: 0 0 30px;
+  font-weight: 700;
+  font-size: 18px; }
+
+.feedback__info {
+  display: none;
+  font-weight: 400;
+  font-size: 14px; }
+
+.feedback__description {
+  font-weight: 400;
+  font-size: 14px;
+  margin: 0;
+  text-align: center; }
+
+.reviews__dots {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.reviews__dot {
+  display: block;
+  border: none;
+  padding: 0;
+  width: 6px;
+  height: 6px;
+  background-color: #283645;
+  opacity: 0.3;
+  cursor: pointer;
+  border-radius: 50%; }
+  .reviews__dot--active {
+    outline: 3px solid #283645;
+    background-color: #ffffff;
+    opacity: 1; }
+
+.reviews__dot + .reviews__dot {
+  margin-left: 19px; }
+
+.tariff {
+  overflow: scroll; }
+
+.contacts__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-top: 50px;
+  padding-bottom: 50px; }
+
+.contacts__callback {
+  margin: 0;
+  font-weight: 300;
+  font-size: 24px;
+  text-align: center; }
+
+.contacts__item {
+  display: flex;
+  flex-direction: column;
+  text-align: center; }
+
+.contact__link {
+  font-weight: 300;
+  font-size: 24px;
+  color: #d22856;
+  text-decoration: none;
+  font-style: normal; }
+
+.contact__definition {
+  font-weight: 700;
+  font-size: 18px; }
+
+.map {
+  position: relative; }
+
+.map__decoration {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-image: url("/img/map/map-triangle.svg");
+  background-size: cover;
+  background-position: center -114px;
+  background-repeat: no-repeat; }
+
+.main-footer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  padding-bottom: 40px; }
+
+.socials-list {
+  margin: 38px 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.socials-list__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  border: 2px solid rgba(40, 54, 69, 0.1); }
+
+.socials-list__item + .socials-list__item {
+  margin-left: 9px; }
+
+.main-footer__logo-link {
+  text-align: center;
+  text-decoration: none; }
+
+.copyright__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #283645;
+  font-weight: 400;
+  font-size: 14px; }
+
+.copyright__definition {
+  margin-right: 15px; }
+/*# sourceMappingURL=style.css.map */
