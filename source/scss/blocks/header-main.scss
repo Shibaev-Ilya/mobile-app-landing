@@ -1,6 +1,6 @@
 .header-main {
   background-color: $color-main;
-  background-image: url("/img/header/back-mobile.png");
+  background-image: url("img/header/back-mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
@@ -9,10 +9,10 @@
   flex-direction: column;
 
   @include smallWidth() {
-    background-image: url("/img/header/back-tablet.jpg");
+    background-image: url("img/header/back-tablet.jpg");
   }
   @include mediumWidth() {
-    background-image: url("/img/header/back-desktop.jpg");
+    background-image: url("img/header/back-desktop.jpg");
   }
 }
 

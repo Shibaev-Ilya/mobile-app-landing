@@ -45,14 +45,14 @@
   &--fourth {
     grid-row: -1 / -2;
     overflow: hidden;
-    background-image: url("/img/advantages/iphone-mobile.png");
+    background-image: url("img/advantages/iphone-mobile.png");
     background-repeat: no-repeat;
     background-position: top;
 
     @include mediumWidth() {
       grid-column: 1 / 2;
       grid-row: 1 / -1;
-      background-image: url("/img/advantages/iphone-tablet.png");
+      background-image: url("img/advantages/iphone-tablet.png");
       background-position: center 76px;
     }
   }
