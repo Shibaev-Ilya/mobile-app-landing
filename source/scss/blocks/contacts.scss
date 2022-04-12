@@ -17,6 +17,7 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  margin-top: 30px;
 }
 
 .contact__link {
@@ -34,6 +35,9 @@
 
 .map {
   position: relative;
+  min-height: 200px;
+  background: url("../img/map/map-triangle.svg") center -89px no-repeat,
+  url("../img/map/map-xs.png") center no-repeat;
 }
 
 .map__decoration {
@@ -46,6 +50,6 @@
   margin: auto;
   background-image: url("../img/map/map-triangle.svg");
   background-size: cover;
-  background-position: center -114px;
+  background-position: center -165px;
   background-repeat: no-repeat;
 }

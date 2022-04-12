@@ -11,6 +11,7 @@
   @include smallWidth() {
     background-image: url("../img/header/back-tablet.jpg");
   }
+
   @include mediumWidth() {
     background-image: url("../img/header/back-desktop.jpg");
   }
@@ -31,6 +32,14 @@
     background: #283645;
     box-shadow: 0px 1px 0px #000000, inset 0px 1px 0px rgba(255, 255, 255, 0.15);
   }
+
+  @include mediumWidth() {
+    margin-bottom: 70px;
+  }
+
+  @include largeWidth() {
+    margin-bottom: 92px;
+  }
 }
 
 .navigation__list {
@@ -48,6 +57,13 @@
     background-color: $color-main;
     transform: translateY(100%);
   }
+
+  @include largeWidth() {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    max-width: 800px;
+  }
 }
 
 .navigation__item {
@@ -57,6 +73,11 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 1px;
+
+  @include largeWidth() {
+    box-shadow: none;
+    background-color: transparent;
+  }
 }
 
 .navigation__link {
@@ -76,6 +97,10 @@
   width: 50px;
   height: 24px;
   transition: width 0.3s;
+
+  @include largeWidth() {
+    display: none;
+  }
 
   &::before {
     content: "";

@@ -1,27 +1,73 @@
 .apps {
   display: grid;
+  grid-template-rows: min-content 286px 1fr;
+  grid-template-columns: 20px 1fr 20px;
 
   @include mediumWidth() {
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 20px 320px 2fr 20px;
+    grid-template-rows: 1fr 1fr 100px;
+    background-image: url("../img/header/phone-l.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+  }
+
+  @include largeWidth() {
+    grid-template-columns: 1fr minmax(310px, 400px)  minmax(630px, 800px) 1fr;
   }
 }
 
 .apps__intro {
   display: block;
   max-width: 300px;
+  margin: 34px auto;
   font-weight: 300;
   font-size: 24px;
   line-height: 120%;
   text-align: center;
+
+  @include mediumWidth() {
+    font-size: 40px;
+  }
+
+  @include largeWidth() {
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 68px;
+  }
+
 }
 
 .apps__wrapper {
   background-color: #1d2631;
-  padding: 28px 0 38px;
+  padding: 28px 20px 38px;
+  grid-column: 1 / -1;
+
+  @include mediumWidth() {
+    background-color: transparent;
+    padding: 0;
+    grid-column: 2 / 3;
+    grid-row: -2 / -3;
+  }
+
+  @include largeWidth() {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.apps__header {
+  grid-column: 2 / 3;
+
+  @include mediumWidth() {
+    grid-row: 1 / 3;
+  }
 }
 
 .apps__link-button {
+  margin: 0 auto;
   max-width: 300px;
   color: $color-light;
   text-decoration: none;
@@ -32,13 +78,19 @@
   font-size: 17px;
   line-height: 18px;
   border: 3px solid $color-light;
-  padding: 20px 38px;
+  padding: 19px 32px;
   border-radius: 29px;
+
+  @include largeWidth() {
+    width: 300px;
+    font-size: 21px;
+    line-height: 18px;
+  }
 }
 
 .apps__list {
   padding: 0;
-  margin: 0;
+  margin: 32px 0 28px;
   list-style: none;
   display: flex;
   justify-content: center;
@@ -56,17 +108,34 @@
 .apps__info {
   font-size: 14px;
   text-align: center;
-  margin: 0;
+  margin: 0 auto;
   max-width: 300px;
+
+  @include largeWidth() {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 
 .apps__image {
   display: block;
+  height: 100%;
   max-width: 100%;
   align-self: end;
+  background-image: url("../img/header/phone.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  grid-column: 2 / 3;
 
   @include mediumWidth() {
-    grid-column: 2 / 3;
-    grid-row: 1 / 3;
+    grid-column: 3 / 4;
+    grid-row: 1 / -1;
+    background-image: none;
+  }
+
+  @include largeWidth() {
+    grid-column: 3 / 4;
+    grid-row: 1 / -1;
+    background-image: none;
   }
 }

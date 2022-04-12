@@ -37,6 +37,8 @@
   padding: 0 20px; }
   @media (min-width: 1200px) {
     .container {
+      max-width: 1200px;
+      margin: 0 auto;
       padding: 0 130px; } }
 
 .header-main {
@@ -67,6 +69,12 @@
   .header-main__wrap--open {
     background: #283645;
     box-shadow: 0px 1px 0px #000000, inset 0px 1px 0px rgba(255, 255, 255, 0.15); }
+  @media (min-width: 660px) {
+    .header-main__wrap {
+      margin-bottom: 70px; } }
+  @media (min-width: 1200px) {
+    .header-main__wrap {
+      margin-bottom: 92px; } }
 
 .navigation__list {
   display: none;
@@ -81,6 +89,12 @@
     left: 0;
     background-color: #283645;
     transform: translateY(100%); }
+  @media (min-width: 1200px) {
+    .navigation__list {
+      display: flex;
+      flex-grow: 1;
+      justify-content: space-between;
+      max-width: 800px; } }
 
 .navigation__item {
   background: #283645;
@@ -89,6 +103,10 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 1px; }
+  @media (min-width: 1200px) {
+    .navigation__item {
+      box-shadow: none;
+      background-color: transparent; } }
 
 .navigation__link {
   display: block;
@@ -112,6 +130,9 @@
   color: inherit;
   background-color: transparent;
   cursor: pointer; }
+  @media (min-width: 1200px) {
+    .navigation__toggle {
+      display: none; } }
   .navigation__toggle::before {
     content: "";
     width: 100%;
@@ -148,25 +169,63 @@
       transform-origin: bottom left; }
 
 .apps {
-  display: grid; }
+  display: grid;
+  grid-template-rows: min-content 286px 1fr;
+  grid-template-columns: 20px 1fr 20px; }
   @media (min-width: 660px) {
     .apps {
-      grid-template-columns: 1fr 2fr;
-      grid-template-rows: 1fr 1fr; } }
+      grid-template-columns: 20px 320px 2fr 20px;
+      grid-template-rows: 1fr 1fr 100px;
+      background-image: url("../img/header/phone-l.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: bottom center; } }
+  @media (min-width: 1200px) {
+    .apps {
+      grid-template-columns: 1fr minmax(310px, 400px) minmax(630px, 800px) 1fr; } }
 
 .apps__intro {
   display: block;
   max-width: 300px;
+  margin: 34px auto;
   font-weight: 300;
   font-size: 24px;
   line-height: 120%;
   text-align: center; }
+  @media (min-width: 660px) {
+    .apps__intro {
+      font-size: 40px; } }
+  @media (min-width: 1200px) {
+    .apps__intro {
+      font-weight: 300;
+      font-size: 50px;
+      line-height: 68px; } }
 
 .apps__wrapper {
   background-color: #1d2631;
-  padding: 28px 0 38px; }
+  padding: 28px 20px 38px;
+  grid-column: 1 / -1; }
+  @media (min-width: 660px) {
+    .apps__wrapper {
+      background-color: transparent;
+      padding: 0;
+      grid-column: 2 / 3;
+      grid-row: -2 / -3; } }
+  @media (min-width: 1200px) {
+    .apps__wrapper {
+      min-height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; } }
+
+.apps__header {
+  grid-column: 2 / 3; }
+  @media (min-width: 660px) {
+    .apps__header {
+      grid-row: 1 / 3; } }
 
 .apps__link-button {
+  margin: 0 auto;
   max-width: 300px;
   color: #ffffff;
   text-decoration: none;
@@ -177,12 +236,17 @@
   font-size: 17px;
   line-height: 18px;
   border: 3px solid #ffffff;
-  padding: 20px 38px;
+  padding: 19px 32px;
   border-radius: 29px; }
+  @media (min-width: 1200px) {
+    .apps__link-button {
+      width: 300px;
+      font-size: 21px;
+      line-height: 18px; } }
 
 .apps__list {
   padding: 0;
-  margin: 0;
+  margin: 32px 0 28px;
   list-style: none;
   display: flex;
   justify-content: center;
@@ -197,17 +261,32 @@
 .apps__info {
   font-size: 14px;
   text-align: center;
-  margin: 0;
+  margin: 0 auto;
   max-width: 300px; }
+  @media (min-width: 1200px) {
+    .apps__info {
+      font-size: 18px;
+      line-height: 24px; } }
 
 .apps__image {
   display: block;
+  height: 100%;
   max-width: 100%;
-  align-self: end; }
+  align-self: end;
+  background-image: url("../img/header/phone.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  grid-column: 2 / 3; }
   @media (min-width: 660px) {
     .apps__image {
-      grid-column: 2 / 3;
-      grid-row: 1 / 3; } }
+      grid-column: 3 / 4;
+      grid-row: 1 / -1;
+      background-image: none; } }
+  @media (min-width: 1200px) {
+    .apps__image {
+      grid-column: 3 / 4;
+      grid-row: 1 / -1;
+      background-image: none; } }
 
 .promo__item {
   margin: 0;
@@ -233,6 +312,7 @@
 
 .preference__item {
   max-width: 310px;
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
   align-items: center; }
@@ -344,7 +424,8 @@
 .contacts__item {
   display: flex;
   flex-direction: column;
-  text-align: center; }
+  text-align: center;
+  margin-top: 30px; }
 
 .contact__link {
   font-weight: 300;
@@ -358,7 +439,9 @@
   font-size: 18px; }
 
 .map {
-  position: relative; }
+  position: relative;
+  min-height: 200px;
+  background: url("../img/map/map-triangle.svg") center -89px no-repeat, url("../img/map/map-xs.png") center no-repeat; }
 
 .map__decoration {
   position: absolute;
@@ -370,7 +453,7 @@
   margin: auto;
   background-image: url("../img/map/map-triangle.svg");
   background-size: cover;
-  background-position: center -114px;
+  background-position: center -165px;
   background-repeat: no-repeat; }
 
 .main-footer {
