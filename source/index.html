@@ -7,6 +7,7 @@
   <link rel="icon" href="favicon32x32.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon32x32.png">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="modules/leaflet/leaflet.css">
 </head>
 <body class="page__body">
 <header class="header-main">
@@ -217,7 +218,8 @@
         <address class="contact__link">ул. Большая Конюшенная, 19/8</address>
       </div>
     </div>
-    <div class="contacts__map map">
+    <div class="contacts__map map js-map">
+      <div class="map__decoration"></div>
     </div>
   </section>
 </main>
@@ -297,6 +299,7 @@
     </a>
   </div>
 </footer>
-<script src="js/main.js"></script>
+<script src="modules/leaflet/leaflet.js"></script>
+<script src="js/main.js" type="module"></script>
 </body>
 </html>

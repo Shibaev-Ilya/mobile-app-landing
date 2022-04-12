@@ -36,8 +36,6 @@
 .map {
   position: relative;
   min-height: 200px;
-  background: url("../img/map/map-triangle.svg") center -89px no-repeat,
-  url("../img/map/map-xs.png") center no-repeat;
 }
 
 .map__decoration {
@@ -52,4 +50,5 @@
   background-size: cover;
   background-position: center -165px;
   background-repeat: no-repeat;
+  z-index: 402;
 }

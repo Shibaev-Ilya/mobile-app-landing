@@ -1,3 +1,5 @@
+import './map.js'
+
 const burger = document.querySelector('.js-navigation__toggle');
 const menu = document.querySelector('.navigation__list');
 const header = document.querySelector('.header-main__wrap');
