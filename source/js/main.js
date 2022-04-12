@@ -1,4 +1,5 @@
 import './map.js'
+import './slider.js'
 
 const burger = document.querySelector('.js-navigation__toggle');
 const menu = document.querySelector('.navigation__list');
