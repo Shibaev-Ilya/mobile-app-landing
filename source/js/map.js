@@ -8,7 +8,7 @@ const map = L.map(mapBlock);
 
 // кастомная иконка главного маркера
 let myIcon = L.icon({
-  iconUrl: '../img/map/map-marker.svg',
+  iconUrl: 'img/map/map-marker.svg',
   iconSize: [36, 36],
 });
 
