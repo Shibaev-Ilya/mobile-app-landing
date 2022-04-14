@@ -1,0 +1,36 @@
+.additional-info {
+  display: none;
+  margin: 0 auto;
+
+  @include mediumWidth() {
+    display: grid;
+    grid-template-columns: 240px 70px 310px;
+    align-items: center;
+    justify-content: center;
+    padding: 54px 20px;
+  }
+
+  @include largeWidth() {
+    grid-template-columns: 300px 70px 500px;
+    grid-template-rows: minmax(345px, max-content);
+    padding: 54px 130px;
+    background-color: #f2f2f2;
+  }
+}
+
+.additional-info__block {
+  grid-column: 3 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.additional-info__image {
+  background-image: url("../img/advantages/clock-24.svg");
+  background-position: center left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100%;
+  grid-column: 1 / 1;
+}

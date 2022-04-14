@@ -3,6 +3,17 @@
   flex-direction: column;
   padding-top: 40px;
   padding-bottom: 40px;
+
+  @include mediumWidth() {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @include largeWidth() {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
 }
 
 .socials-list {
@@ -12,6 +23,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include mediumWidth() {
+    margin: 0;
+  }
 }
 
 .socials-list__link {

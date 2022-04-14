@@ -7,7 +7,8 @@
   padding: 0;
   /* Fix of Webkit flickering */
   z-index: 1;
-  width: 600px;
+  width: 100%;
+  max-width: 680px;
   height: auto;
 }
 
@@ -188,6 +189,10 @@
   justify-content: center;
   margin-top: 40px;
   margin-bottom: 20px;
+
+  @include mediumWidth() {
+    margin-top: 50px;
+  }
 
   .swiper-pagination-bullet {
     display: block;

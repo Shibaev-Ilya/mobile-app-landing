@@ -1,7 +1,21 @@
 .promo__item {
-  margin: 0;
+  margin: 0 0 24px;
+  padding: 0 20px;
   font-size: 24px;
   text-align: center;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @include mediumWidth() {
+    font-size: 40px;
+  }
+
+  @include largeWidth() {
+    font-size: 50px;
+    padding: 0 130px;
+  }
 }
 
 .advantages {
@@ -11,7 +25,7 @@
 .advantages__list {
   margin: 0;
   list-style: none;
-  background: linear-gradient(171deg, rgba(0, 212, 255, 0) 7%, rgba(242, 242, 242, 1) 7%);
+  background: linear-gradient(171deg, rgba(0, 212, 255, 0) 11%, rgba(242, 242, 242, 1) 11%);
   padding: 0;
   display: grid;
   justify-content: center;
@@ -20,7 +34,20 @@
   @include mediumWidth() {
     background: linear-gradient(175deg, rgba(0, 212, 255, 0) 21%, rgba(242, 242, 242, 1) 21%);
     grid-template-rows: 120px repeat(3, min-content);
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 325px 325px;
+  }
+
+  @include largeWidth() {
+    grid-template-columns: 130px repeat(3, minmax(250px, 270px)) 130px;
+    grid-template-rows: 70px 1fr;
+  }
+}
+
+.preference__phone {
+  display: none;
+
+  @include largeWidth() {
+    display: block;
   }
 }
 
@@ -31,16 +58,39 @@
   flex-direction: column;
   align-items: center;
 
+  @include mediumWidth() {
+    align-items: flex-start;
+  }
+
+  @include largeWidth() {
+    align-items: center;
+  }
+
   &--first {
     grid-row: 2 / 3;
+
+    @include largeWidth() {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+    }
   }
 
   &--second {
     grid-row: 3 / 4;
+
+    @include largeWidth() {
+      grid-column: 3 / 4;
+      grid-row: 2 / 3;
+    }
   }
 
   &--third {
     grid-row: 4 / 5;
+
+    @include largeWidth() {
+      grid-column: 4 / 5;
+      grid-row: 2 / 3;
+    }
   }
 
   &--fourth {
@@ -55,6 +105,10 @@
       grid-row: 1 / -1;
       background-image: url("../img/advantages/iphone-tablet.png");
       background-position: center 76px;
+    }
+
+    @include largeWidth() {
+      display: none;
     }
   }
 }
@@ -73,10 +127,25 @@
   font-weight: 700;
   font-size: 18px;
   color: $color-dark;
+
+  @include largeWidth() {
+    font-size: 30px;
+    text-align: center;
+  }
 }
 
 .preference__descriprion {
   text-align: center;
   font-size: 14px;
   margin: 0 0 43px;
+
+  @include mediumWidth() {
+    text-align: left;
+  }
+
+  @include largeWidth() {
+    text-align: center;
+    font-size: 18px;
+    line-height: 30px;
+  }
 }

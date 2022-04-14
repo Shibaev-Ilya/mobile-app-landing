@@ -125,7 +125,7 @@
   background-image: url("../img/header/phone.png");
   background-repeat: no-repeat;
   background-position: center bottom;
-  grid-column: 2 / 3;
+  grid-column: 1 / 4;
 
   @include mediumWidth() {
     grid-column: 3 / 4;

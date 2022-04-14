@@ -50,7 +50,7 @@
   color: #ffffff;
   display: flex;
   flex-direction: column; }
-  @media (min-width: 321px) {
+  @media (min-width: 415px) {
     .header-main {
       background-image: url("../img/header/back-tablet.jpg"); } }
   @media (min-width: 660px) {
@@ -276,7 +276,7 @@
   background-image: url("../img/header/phone.png");
   background-repeat: no-repeat;
   background-position: center bottom;
-  grid-column: 2 / 3; }
+  grid-column: 1 / 4; }
   @media (min-width: 660px) {
     .apps__image {
       grid-column: 3 / 4;
@@ -289,9 +289,19 @@
       background-image: none; } }
 
 .promo__item {
-  margin: 0;
+  margin: 0 0 24px;
+  padding: 0 20px;
   font-size: 24px;
   text-align: center; }
+  .promo__item:last-of-type {
+    margin-bottom: 0; }
+  @media (min-width: 660px) {
+    .promo__item {
+      font-size: 40px; } }
+  @media (min-width: 1200px) {
+    .promo__item {
+      font-size: 50px;
+      padding: 0 130px; } }
 
 .advantages {
   padding-top: 46px; }
@@ -299,7 +309,7 @@
 .advantages__list {
   margin: 0;
   list-style: none;
-  background: linear-gradient(171deg, rgba(0, 212, 255, 0) 7%, #f2f2f2 7%);
+  background: linear-gradient(171deg, rgba(0, 212, 255, 0) 11%, #f2f2f2 11%);
   padding: 0;
   display: grid;
   justify-content: center;
@@ -308,7 +318,17 @@
     .advantages__list {
       background: linear-gradient(175deg, rgba(0, 212, 255, 0) 21%, #f2f2f2 21%);
       grid-template-rows: 120px repeat(3, min-content);
-      grid-template-columns: 1fr 1fr; } }
+      grid-template-columns: 325px 325px; } }
+  @media (min-width: 1200px) {
+    .advantages__list {
+      grid-template-columns: 130px repeat(3, minmax(250px, 270px)) 130px;
+      grid-template-rows: 70px 1fr; } }
+
+.preference__phone {
+  display: none; }
+  @media (min-width: 1200px) {
+    .preference__phone {
+      display: block; } }
 
 .preference__item {
   max-width: 310px;
@@ -316,12 +336,30 @@
   display: flex;
   flex-direction: column;
   align-items: center; }
+  @media (min-width: 660px) {
+    .preference__item {
+      align-items: flex-start; } }
+  @media (min-width: 1200px) {
+    .preference__item {
+      align-items: center; } }
   .preference__item--first {
     grid-row: 2 / 3; }
+    @media (min-width: 1200px) {
+      .preference__item--first {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3; } }
   .preference__item--second {
     grid-row: 3 / 4; }
+    @media (min-width: 1200px) {
+      .preference__item--second {
+        grid-column: 3 / 4;
+        grid-row: 2 / 3; } }
   .preference__item--third {
     grid-row: 4 / 5; }
+    @media (min-width: 1200px) {
+      .preference__item--third {
+        grid-column: 4 / 5;
+        grid-row: 2 / 3; } }
   .preference__item--fourth {
     grid-row: -1 / -2;
     overflow: hidden;
@@ -334,6 +372,9 @@
         grid-row: 1 / -1;
         background-image: url("../img/advantages/iphone-tablet.png");
         background-position: center 76px; } }
+    @media (min-width: 1200px) {
+      .preference__item--fourth {
+        display: none; } }
 
 .preference__image {
   order: 3;
@@ -346,11 +387,23 @@
   font-weight: 700;
   font-size: 18px;
   color: #000000; }
+  @media (min-width: 1200px) {
+    .preference__title {
+      font-size: 30px;
+      text-align: center; } }
 
 .preference__descriprion {
   text-align: center;
   font-size: 14px;
   margin: 0 0 43px; }
+  @media (min-width: 660px) {
+    .preference__descriprion {
+      text-align: left; } }
+  @media (min-width: 1200px) {
+    .preference__descriprion {
+      text-align: center;
+      font-size: 18px;
+      line-height: 30px; } }
 
 .reviews {
   padding-bottom: 50px;
@@ -371,17 +424,34 @@
   margin: 0 0 30px;
   font-weight: 700;
   font-size: 18px; }
+  @media (min-width: 660px) {
+    .feedback__name {
+      order: 2;
+      margin-bottom: 17px; } }
 
 .feedback__info {
   display: none;
   font-weight: 400;
-  font-size: 14px; }
+  font-size: 14px;
+  margin: 0; }
+  @media (min-width: 660px) {
+    .feedback__info {
+      display: block;
+      order: 3; } }
+  @media (min-width: 1200px) {
+    .feedback__info {
+      font-size: 18px; } }
 
 .feedback__description {
   font-weight: 400;
   font-size: 14px;
+  line-height: 30px;
   margin: 0;
   text-align: center; }
+  @media (min-width: 660px) {
+    .feedback__description {
+      font-size: 18px;
+      margin-bottom: 50px; } }
 
 .reviews__dots {
   display: flex;
@@ -409,24 +479,61 @@
 .tariff {
   overflow: scroll; }
 
+.contacts {
+  position: relative;
+  padding-top: 47px; }
+  @media (min-width: 660px) {
+    .contacts {
+      padding-top: 55px; } }
+  @media (min-width: 1200px) {
+    .contacts {
+      padding-top: 74px; } }
+
 .contacts__wrapper {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding-top: 50px;
-  padding-bottom: 50px; }
+  padding-top: 45px;
+  padding-bottom: 15px; }
+  @media (min-width: 660px) {
+    .contacts__wrapper {
+      padding-top: 50px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center; } }
 
 .contacts__callback {
   margin: 0;
   font-weight: 300;
   font-size: 24px;
   text-align: center; }
+  @media (min-width: 660px) {
+    .contacts__callback {
+      font-size: 40px; } }
+  @media (min-width: 1200px) {
+    .contacts__callback {
+      font-size: 50px; } }
 
 .contacts__item {
   display: flex;
   flex-direction: column;
   text-align: center;
   margin-top: 30px; }
+  .contacts__item:first-child {
+    margin-top: 0; }
+  @media (min-width: 660px) {
+    .contacts__item {
+      margin-top: 0;
+      width: 48%; }
+      .contacts__item:not(:last-child) {
+        margin-bottom: 50px; } }
+  @media (min-width: 1200px) {
+    .contacts__item {
+      width: 33%; }
+      .contacts__item:not(:last-child) {
+        margin-bottom: 0; }
+      .contacts__item--third {
+        order: 3; } }
 
 .contact__link {
   font-weight: 300;
@@ -441,27 +548,40 @@
 
 .map {
   position: relative;
-  min-height: 200px; }
-
-.map__decoration {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  background-image: url("../img/map/map-triangle.svg");
-  background-size: cover;
-  background-position: center -165px;
-  background-repeat: no-repeat;
-  z-index: 402; }
+  height: 200px; }
+  .map::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -2px;
+    margin: 0;
+    background-image: url("../img/map/map-decor.svg");
+    background-position: top center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 500; }
+  @media (min-width: 660px) {
+    .map {
+      height: 375px; } }
+  @media (min-width: 1200px) {
+    .map {
+      height: 502px; } }
 
 .main-footer {
   display: flex;
   flex-direction: column;
   padding-top: 40px;
   padding-bottom: 40px; }
+  @media (min-width: 660px) {
+    .main-footer {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center; } }
+  @media (min-width: 1200px) {
+    .main-footer {
+      padding-top: 70px;
+      padding-bottom: 70px; } }
 
 .socials-list {
   margin: 38px 0;
@@ -470,6 +590,9 @@
   display: flex;
   justify-content: center;
   align-items: center; }
+  @media (min-width: 660px) {
+    .socials-list {
+      margin: 0; } }
 
 .socials-list__link {
   display: flex;
@@ -508,7 +631,8 @@
   padding: 0;
   /* Fix of Webkit flickering */
   z-index: 1;
-  width: 600px;
+  width: 100%;
+  max-width: 680px;
   height: auto; }
 
 .swiper-vertical > .swiper-wrapper {
@@ -647,6 +771,9 @@
   justify-content: center;
   margin-top: 40px;
   margin-bottom: 20px; }
+  @media (min-width: 660px) {
+    .swiper-pagination {
+      margin-top: 50px; } }
   .swiper-pagination .swiper-pagination-bullet {
     display: block;
     border: none;
@@ -663,4 +790,36 @@
       opacity: 1; }
     .swiper-pagination .swiper-pagination-bullet + .swiper-pagination-bullet {
       margin-left: 19px; }
+
+.additional-info {
+  display: none;
+  margin: 0 auto; }
+  @media (min-width: 660px) {
+    .additional-info {
+      display: grid;
+      grid-template-columns: 240px 70px 310px;
+      align-items: center;
+      justify-content: center;
+      padding: 54px 20px; } }
+  @media (min-width: 1200px) {
+    .additional-info {
+      grid-template-columns: 300px 70px 500px;
+      grid-template-rows: minmax(345px, max-content);
+      padding: 54px 130px;
+      background-color: #f2f2f2; } }
+
+.additional-info__block {
+  grid-column: 3 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center; }
+
+.additional-info__image {
+  background-image: url("../img/advantages/clock-24.svg");
+  background-position: center left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100%;
+  grid-column: 1 / 1; }
 /*# sourceMappingURL=style.css.map */

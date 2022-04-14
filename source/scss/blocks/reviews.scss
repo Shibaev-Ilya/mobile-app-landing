@@ -20,19 +20,40 @@
   margin: 0 0 30px;
   font-weight: 700;
   font-size: 18px;
+
+  @include mediumWidth() {
+    order: 2;
+    margin-bottom: 17px;
+  }
 }
 
 .feedback__info {
   display: none;
   font-weight: 400;
   font-size: 14px;
+  margin: 0;
+
+  @include mediumWidth() {
+    display: block;
+    order: 3;
+  }
+
+  @include largeWidth() {
+    font-size: 18px;
+  }
 }
 
 .feedback__description {
   font-weight: 400;
   font-size: 14px;
+  line-height: 30px;
   margin: 0;
   text-align: center;
+
+  @include mediumWidth() {
+    font-size: 18px;
+    margin-bottom: 50px;
+  }
 }
 
 .reviews__dots {
