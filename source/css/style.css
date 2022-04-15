@@ -489,7 +489,8 @@
 
 .tariff {
   padding: 114px 0 70px;
-  background: none; }
+  background: none;
+  overflow: scroll; }
   @media (min-width: 660px) {
     .tariff {
       background-image: url("../img/background-gray.svg");
