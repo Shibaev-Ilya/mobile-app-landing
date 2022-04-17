@@ -17,7 +17,7 @@
 .container {
   padding: 0 20px;
 
-  @include largeWidth() {
+  @media (min-width: $largeScreen) {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 130px;

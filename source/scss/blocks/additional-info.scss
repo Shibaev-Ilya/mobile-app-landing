@@ -2,7 +2,7 @@
   display: none;
   margin: 0 auto;
 
-  @include mediumWidth() {
+  @media (min-width: $mediumScreen) {
     display: grid;
     grid-template-columns: 240px 70px 310px;
     align-items: center;
@@ -10,7 +10,7 @@
     padding: 54px 20px;
   }
 
-  @include largeWidth() {
+  @media (min-width: $largeScreen) {
     grid-template-columns: 300px 70px 500px;
     grid-template-rows: minmax(345px, max-content);
     padding: 54px 130px;

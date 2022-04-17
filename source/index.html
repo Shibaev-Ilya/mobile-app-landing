@@ -147,7 +147,6 @@
   <section class="reviews">
     <div class="container">
       <h2 class="visually-hidden">Отзывы.</h2>
-
       <div class="swiper">
         <div class="feedback__list swiper-wrapper">
           <div class="feedback__item swiper-slide">
@@ -193,43 +192,77 @@
 
   </section>
   <section class="tariff">
-      <h2 class="visually-hidden">Тарифы.</h2>
-      <table class="tariff__table table-cost">
-        <tr class="table-cost__item">
-          <th>
-          </th>
-          <th class="table-cost__title table-cost__title--first">
-            Стандарт
-            <span class="table-cost__sum">3,99 USD</span>
-          </th>
-          <th class="table-cost__title table-cost__title--marked">
-            Стандарт
-            <span class="table-cost__sum">3,99 USD</span>
-          </th>
-          <th class="table-cost__title table-cost__title--last">
-            Стандарт
-            <span class="table-cost__sum">3,99 USD</span>
-          </th>
-        </tr>
-        <tr class="table-cost__item">
-          <td class="table-cost__cell table-cost__cell--head">Розовый фильтр</td>
-          <td class="table-cost__cell">да</td>
-          <td class="table-cost__cell">да</td>
-          <td class="table-cost__cell">да</td>
-        </tr>
-        <tr class="table-cost__item">
-          <td class="table-cost__cell table-cost__cell--head">Смайлики</td>
-          <td class="table-cost__cell">нет</td>
-          <td class="table-cost__cell">да</td>
-          <td class="table-cost__cell">да</td>
-        </tr>
-        <tr class="table-cost__item">
-          <td class="table-cost__cell table-cost__cell--head">Комментарии</td>
-          <td class="table-cost__cell">нет</td>
-          <td class="table-cost__cell">да</td>
-          <td class="table-cost__cell">да</td>
-        </tr>
-      </table>
+    <h2 class="visually-hidden">Тарифы.</h2>
+    <table class="tariff__table table-cost">
+      <tr class="table-cost__item">
+        <th>
+        </th>
+        <th class="table-cost__title table-cost__title--first">
+          База
+          <span class="table-cost__sum">1,99 USD</span>
+        </th>
+        <th class="table-cost__title table-cost__title--marked">
+          Стандарт
+          <span class="table-cost__sum">3,99 USD</span>
+        </th>
+        <th class="table-cost__title table-cost__title--last">
+          Анлим
+          <span class="table-cost__sum">9,99 USD</span>
+        </th>
+      </tr>
+      <tr class="table-cost__item">
+        <td class="table-cost__cell table-cost__cell--head">Розовый фильтр</td>
+        <td class="table-cost__cell">да</td>
+        <td class="table-cost__cell">да</td>
+        <td class="table-cost__cell">да</td>
+      </tr>
+      <tr class="table-cost__item">
+        <td class="table-cost__cell table-cost__cell--head">Смайлики</td>
+        <td class="table-cost__cell">нет</td>
+        <td class="table-cost__cell">да</td>
+        <td class="table-cost__cell">да</td>
+      </tr>
+      <tr class="table-cost__item">
+        <td class="table-cost__cell table-cost__cell--head">Комментарии</td>
+        <td class="table-cost__cell">нет</td>
+        <td class="table-cost__cell">да</td>
+        <td class="table-cost__cell">да</td>
+      </tr>
+    </table>
+    <div class="tariff-mobile">
+      <div class="tariff-mobile__column js-tariff-slider">
+        <div class=" swiper-wrapper">
+          <div class="tariff-mobile__column swiper-slide">
+            <div class="tariff-mobile__header">
+              База
+              <span class="table-cost__sum">1,99 USD</span>
+            </div>
+            <div class="tariff-mobile__row">Розовый фильтр +</div>
+            <div class="tariff-mobile__row">Смайлики -</div>
+            <div class="tariff-mobile__row">Комментарии -</div>
+          </div>
+          <div class="tariff-mobile__column swiper-slide">
+            <div class="tariff-mobile__header">
+              Стандарт
+              <span class="table-cost__sum">3,99 USD</span>
+            </div>
+            <div class="tariff-mobile__row">Розовый фильтр +</div>
+            <div class="tariff-mobile__row">Смайлики +</div>
+            <div class="tariff-mobile__row">Комментарии -</div>
+          </div>
+          <div class="tariff-mobile__column swiper-slide">
+            <div class="tariff-mobile__header">
+              Анлим
+              <span class="table-cost__sum">9,99 USD</span>
+            </div>
+            <div class="tariff-mobile__row">Розовый фильтр +</div>
+            <div class="tariff-mobile__row">Смайлики +</div>
+            <div class="tariff-mobile__row">Комментарии +</div>
+          </div>
+        </div>
+        <div class="tariff-pagination"></div>
+      </div>
+    </div>
   </section>
   <section class="contacts container">
     <h2 class="visually-hidden">Наши контакты.</h2>

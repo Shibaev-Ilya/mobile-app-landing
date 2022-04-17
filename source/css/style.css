@@ -488,19 +488,25 @@
   margin-left: 19px; }
 
 .tariff {
-  padding: 114px 0 70px;
-  background: none;
-  overflow: scroll; }
+  padding: 114px 0 45px;
+  background-image: url("../img/background-gray.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-origin: border-box;
+  overflow: hidden;
+  display: flex;
+  justify-content: center; }
   @media (min-width: 660px) {
     .tariff {
-      background-image: url("../img/background-gray.svg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-origin: border-box; } }
+      padding: 114px 20px 70px; } }
 
 .tariff__table {
   border-collapse: collapse;
-  margin: 0 auto; }
+  margin: 0 auto;
+  display: none; }
+  @media (min-width: 660px) {
+    .tariff__table {
+      display: table; } }
 
 .table-cost__cell {
   background-color: #ffffff;
@@ -534,6 +540,26 @@
       background-position: center;
       top: 0;
       left: 0; }
+
+@media (min-width: 660px) {
+  .tariff-mobile {
+    display: none; } }
+
+.tariff-mobile__column {
+  width: 280px; }
+
+.tariff-mobile__row {
+  border-bottom: 2px solid #e5e5e5;
+  background-color: #ffffff;
+  padding: 16px 19px 16px 22px;
+  text-transform: uppercase; }
+
+.tariff-mobile__header {
+  background-color: #283645;
+  color: #ffffff;
+  padding: 20px 10px 35px;
+  text-transform: uppercase;
+  text-align: center; }
 
 .contacts {
   position: relative;
@@ -822,15 +848,15 @@
 .swiper-centered > .swiper-wrapper > .swiper-slide {
   scroll-snap-align: center center; }
 
-.swiper-pagination {
+.swiper-pagination, .tariff-pagination {
   display: flex;
   justify-content: center;
   margin-top: 40px;
   margin-bottom: 20px; }
   @media (min-width: 660px) {
-    .swiper-pagination {
+    .swiper-pagination, .tariff-pagination {
       margin-top: 50px; } }
-  .swiper-pagination .swiper-pagination-bullet {
+  .swiper-pagination .swiper-pagination-bullet, .tariff-pagination .swiper-pagination-bullet {
     display: block;
     border: none;
     padding: 0;
@@ -840,11 +866,11 @@
     opacity: 0.3;
     cursor: pointer;
     border-radius: 50%; }
-    .swiper-pagination .swiper-pagination-bullet-active {
+    .swiper-pagination .swiper-pagination-bullet-active, .tariff-pagination .swiper-pagination-bullet-active {
       outline: 3px solid #283645;
       background-color: #ffffff;
       opacity: 1; }
-    .swiper-pagination .swiper-pagination-bullet + .swiper-pagination-bullet {
+    .swiper-pagination .swiper-pagination-bullet + .swiper-pagination-bullet, .tariff-pagination .swiper-pagination-bullet + .swiper-pagination-bullet {
       margin-left: 19px; }
 
 .additional-info {

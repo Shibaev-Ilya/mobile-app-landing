@@ -1,19 +1,26 @@
 .tariff {
-  padding: 114px 0 70px;
-  background: none;
-  overflow: scroll;
+  padding: 114px 0 45px;
+  background-image: url("../img/background-gray.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-origin: border-box;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
 
-  @include mediumWidth() {
-    background-image: url("../img/background-gray.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-origin: border-box;
+  @media (min-width: $mediumScreen) {
+    padding: 114px 20px 70px;
   }
 }
 
 .tariff__table {
   border-collapse: collapse;
   margin: 0 auto;
+  display: none;
+
+  @media (min-width: $mediumScreen) {
+    display: table;
+  }
 }
 
 .table-cost__cell {
@@ -59,4 +66,38 @@
       left: 0;
     }
   }
+}
+
+.tariff-mobile {
+  //display: grid;
+  //grid-template-columns: repeat(3, 280px);
+  //grid-column-gap: 2px;
+
+  @media (min-width: $mediumScreen) {
+    display: none;
+  }
+}
+
+.tariff-mobile__column {
+  //border-right: 2px solid #e5e5e5;
+  width: 280px;
+}
+
+.tariff-mobile__row {
+  border-bottom: 2px solid #e5e5e5;
+  background-color: $color-light;
+  padding: 16px 19px 16px 22px;
+  text-transform: uppercase;
+
+  //&:first-child {
+  //  border-left: 2px solid #e5e5e5;
+  //}
+}
+
+.tariff-mobile__header {
+  background-color: #283645;
+  color: $color-light;
+  padding: 20px 10px 35px;
+  text-transform: uppercase;
+  text-align: center;
 }

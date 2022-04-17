@@ -2,11 +2,11 @@
   position: relative;
   padding-top: 47px;
 
-  @include mediumWidth() {
+  @media (min-width: $mediumScreen) {
     padding-top: 55px;
   }
 
-  @include largeWidth() {
+  @media (min-width: $largeScreen) {
     padding-top: 74px;
   }
 }
@@ -18,7 +18,7 @@
   padding-top: 45px;
   padding-bottom: 15px;
 
-  @include mediumWidth() {
+  @media (min-width: $mediumScreen) {
     padding-top: 50px;
     flex-direction: row;
     flex-wrap: wrap;
@@ -32,11 +32,11 @@
   font-size: 24px;
   text-align: center;
 
-  @include mediumWidth() {
+  @media (min-width: $mediumScreen) {
     font-size: 40px;
   }
 
-  @include largeWidth() {
+  @media (min-width: $largeScreen) {
     font-size: 50px;
   }
 }
@@ -51,7 +51,7 @@
     margin-top: 0;
   }
 
-  @include mediumWidth() {
+  @media (min-width: $mediumScreen) {
     &:not(:last-child) {
       margin-bottom: 50px;
     }
@@ -59,7 +59,7 @@
     width: 48%;
   }
 
-  @include largeWidth() {
+  @media (min-width: $largeScreen) {
     &:not(:last-child) {
       margin-bottom: 0;
     }
@@ -102,11 +102,11 @@
     z-index: 500;
   }
 
-  @include mediumWidth() {
+  @media (min-width: $mediumScreen) {
     height: 375px;
   }
 
-  @include largeWidth() {
+  @media (min-width: $largeScreen) {
     height: 502px;
   }
 }

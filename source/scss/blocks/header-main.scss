@@ -8,18 +8,18 @@
   display: flex;
   flex-direction: column;
 
-  @include smallWidth() {
+  @media (min-width: $smallScreen) {
     background-size: cover;
     background-image: url("../img/header/back-tablet.jpg");
   }
 
-  @include mediumWidth() {
+  @media (min-width: $mediumScreen) {
     background-image: url("../img/header/back-desktop.jpg");
   }
 }
 
 .navigation__logo-link {
-  @include largeWidth() {
+  @media (min-width: $largeScreen) {
     margin-right: 100px;
   }
 }
@@ -40,11 +40,11 @@
     box-shadow: 0px 1px 0px #000000, inset 0px 1px 0px rgba(255, 255, 255, 0.15);
   }
 
-  @include mediumWidth() {
+  @media (min-width: $mediumScreen) {
     margin-bottom: 70px;
   }
 
-  @include largeWidth() {
+  @media (min-width: $largeScreen) {
     margin-bottom: 92px;
   }
 }
@@ -65,7 +65,7 @@
     transform: translateY(100%);
   }
 
-  @include largeWidth() {
+  @media (min-width: $largeScreen) {
     display: flex;
     flex-grow: 1;
     justify-content: space-between;
@@ -81,7 +81,7 @@
   align-items: center;
   margin-bottom: 1px;
 
-  @include largeWidth() {
+  @media (min-width: $largeScreen) {
     box-shadow: none;
     background-color: transparent;
   }
@@ -105,7 +105,7 @@
   height: 24px;
   transition: width 0.3s;
 
-  @include largeWidth() {
+  @media (min-width: $largeScreen) {
     display: none;
   }
 
