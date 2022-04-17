@@ -848,15 +848,18 @@
 .swiper-centered > .swiper-wrapper > .swiper-slide {
   scroll-snap-align: center center; }
 
-.swiper-pagination, .tariff-pagination {
+.swiper-pagination,
+.tariff-pagination {
   display: flex;
   justify-content: center;
   margin-top: 40px;
   margin-bottom: 20px; }
   @media (min-width: 660px) {
-    .swiper-pagination, .tariff-pagination {
+    .swiper-pagination,
+    .tariff-pagination {
       margin-top: 50px; } }
-  .swiper-pagination .swiper-pagination-bullet, .tariff-pagination .swiper-pagination-bullet {
+  .swiper-pagination .swiper-pagination-bullet,
+  .tariff-pagination .swiper-pagination-bullet {
     display: block;
     border: none;
     padding: 0;
@@ -866,11 +869,13 @@
     opacity: 0.3;
     cursor: pointer;
     border-radius: 50%; }
-    .swiper-pagination .swiper-pagination-bullet-active, .tariff-pagination .swiper-pagination-bullet-active {
+    .swiper-pagination .swiper-pagination-bullet-active,
+    .tariff-pagination .swiper-pagination-bullet-active {
       outline: 3px solid #283645;
       background-color: #ffffff;
       opacity: 1; }
-    .swiper-pagination .swiper-pagination-bullet + .swiper-pagination-bullet, .tariff-pagination .swiper-pagination-bullet + .swiper-pagination-bullet {
+    .swiper-pagination .swiper-pagination-bullet + .swiper-pagination-bullet,
+    .tariff-pagination .swiper-pagination-bullet + .swiper-pagination-bullet {
       margin-left: 19px; }
 
 .additional-info {
