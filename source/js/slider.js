@@ -32,6 +32,7 @@ const tariff = new Swiper('.js-tariff-slider', {
   loop: false,
   simulateTouch: true,
   grabCursor: true,
+  initialSlide: 1,
   /*breakpoints: {
     499: {
       slidesPerView: 1,
