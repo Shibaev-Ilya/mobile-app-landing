@@ -1,12 +1,29 @@
 .tariff {
-  padding: 114px 0 45px;
-  background-image: url("../img/background-gray.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-origin: border-box;
+  padding: 100px 0 45px;
   overflow: hidden;
   display: flex;
   justify-content: center;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: #f2f2f2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(0 7%, 100% 0, 100% 100%, 0 100%);
+
+    @media (min-width: $mediumScreen) {
+      clip-path: polygon(0 9%, 100% 0, 100% 100%, 0 100%);
+    }
+
+    @media (min-width: $largeScreen) {
+      clip-path: polygon(0 16%, 100% 0, 100% 100%, 0 100%);
+    }
+  }
 
   @media (min-width: $mediumScreen) {
     padding: 114px 20px 70px;
